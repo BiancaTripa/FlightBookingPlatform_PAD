@@ -27,4 +27,4 @@ When booking a flight, the 2nd server will automatically redirect the user to an
 Team Members:			Tripa Bianca-Cristina,
 				Tuhasu Adina,
 				Urucu Cristina-Andreea,
-				Voiculescu Daniela,
+				Voiculescu Daniela.
