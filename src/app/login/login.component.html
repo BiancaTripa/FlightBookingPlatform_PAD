@@ -1,0 +1,75 @@
+<!--
+<div class="row d-flex justify-content-center">
+
+  <div class="row">
+    <div class="col-xs-12 col-md-4 col-md-offset-4">
+      <form >
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="p-field p-grid">
+              <label
+
+                class="p-col-fixed"
+                style="width:100px;"
+              >E-Mail: </label>
+              <div class="p-col-fixed">
+                <input
+                  style="width:148px"
+                  pInputText
+                  type="email"
+                  id="email"
+                  ngModel
+                  name="email"
+                  required
+                  email>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="p-field p-grid">
+              <label
+
+                class="p-col-fixed"
+                style="width:100px;"
+              >Password: </label>
+              <div class="p-col-fixed">
+                <input
+                  type="password"
+                  id="password"
+                  ngModel
+                  name="password"
+                  required
+                  minlength="6"
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div style="margin-top: 10px; margin-bottom: 5px; text-align: center">
+            <button class="btn btn-primary"
+                    type="submit">Login</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+-->
+<div class="container col-md-6">
+  <form class="col-5" (ngSubmit)="login()">
+    <div class="mb-3">
+      <label for="mail" class="form-label">Email</label>
+      <input type="text" [(ngModel)]="user.mail" class="form-control" id="mail" name="email">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password">
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
