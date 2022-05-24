@@ -13,7 +13,8 @@ import java.util.List;
 public class Controller {
     @Autowired
     private UserRepository userRepository;
-
+    @Autowired
+    private RegistrationService service;
     @GetMapping(path="/users")
     @CrossOrigin(origins = "http://localhost:4200")
     public  List<User> getAllUsers() {
@@ -35,5 +36,19 @@ public class Controller {
 
 
     }
+    @PostMapping(path = "/login")
+    @CrossOrigin(origins = "http://localhost:4200")
+    public User login(@RequestBody User user) {
+        String tempEmail=user.getMail();
+        String tempPass=user.getPassword();
+        User obj=null;
+        if(tempEmail!=null&&tempPass!=null){
+            obj= service.fetchUserByEmailandPassword(tempEmail,tempPass);
+
+        }
+        return user;
+    }
+
+
 
 }
