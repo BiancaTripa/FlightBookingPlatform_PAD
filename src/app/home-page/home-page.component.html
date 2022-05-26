@@ -1,1 +1,26 @@
-<p>home-page works!</p>
+<table class = "table table-striped">
+  <thead>
+  <tr>
+
+    <th>Start</th>
+    <th>Destination</th>
+    <th>Price</th>
+    <th>Data</th>
+    <th>Hour</th>
+    <th>Seats</th>
+    <th>Company</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let flight of flights" >
+    <td> {{ flight.start }} </td>
+    <td> {{ flight.destination }} </td>
+    <td> {{ flight.price }} </td>
+    <td> {{ flight.data }} </td>
+    <td> {{ flight.hour }} </td>
+    <td> {{ flight.seats }} </td>
+    <td> {{ flight.company }} </td>
+
+  </tr>
+  </tbody>
+</table>

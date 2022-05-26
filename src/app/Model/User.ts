@@ -6,4 +6,5 @@ export class User{
   mail:string;
   phonenr:string;
   password:string;
+
 }
