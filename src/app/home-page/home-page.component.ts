@@ -4,6 +4,7 @@ import {ServiceService} from "../Service/service.service";
 import {FlightServiceService} from "../Service/flight-service.service";
 import {Flight} from "../Model/Flight";
 
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -12,6 +13,10 @@ import {Flight} from "../Model/Flight";
 export class HomePageComponent implements OnInit {
   userLogged:User;
   flights:Flight[];
+  flight=new Flight();
+  flight1:Flight[];
+  issearch=false;
+
   constructor(private service:ServiceService,private flightService:FlightServiceService) {
 
   }
@@ -26,6 +31,11 @@ export class HomePageComponent implements OnInit {
     this.flightService.getFlights().subscribe(data =>{
       this.flights=data;
     })
+  }
+  public searchF(){
+    this.flight1=this.flightService.search(this.flight.start,this.flight.destination,this.flight.data);
+    console.log(this.flight1);
+    this.issearch=true;
   }
 
 }

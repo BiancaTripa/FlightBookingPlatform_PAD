@@ -1,26 +1,52 @@
-<table class = "table table-striped">
-  <thead>
-  <tr>
+<div class="container col-md-6">
+  <h2>Wellcome to FlightBooking</h2>
+  <form (ngSubmit)="searchF()">
 
-    <th>Start</th>
-    <th>Destination</th>
-    <th>Price</th>
-    <th>Data</th>
-    <th>Hour</th>
-    <th>Seats</th>
-    <th>Company</th>
-  </tr>
-  </thead>
-  <tbody>
-  <tr *ngFor = "let flight of flights" >
-    <td> {{ flight.start }} </td>
-    <td> {{ flight.destination }} </td>
-    <td> {{ flight.price }} </td>
-    <td> {{ flight.data }} </td>
-    <td> {{ flight.hour }} </td>
-    <td> {{ flight.seats }} </td>
-    <td> {{ flight.company }} </td>
+    <div class="mb-3">
+      <label for="start" class="form-label">Start</label>
+      <input type="text" class="form-control" id="start" name="start" [(ngModel)]="flight.start">
+    </div>
+    <div class="mb-3">
+      <label for="destination" class="form-label">Destination</label>
+      <input type="text" class="form-control" id="destination" name="destination" [(ngModel)]="flight.destination" >
+    </div>
+    <div class="mb-3">
+      <label for="data" class="form-label">Data</label>
+      <input type="text" class="form-control" id="data" name="data" [(ngModel)]="flight.data" >
+    </div>
 
-  </tr>
-  </tbody>
-</table>
+    <button type="submit" class="btn btn-primary">Search</button>
+
+  </form>
+  <div *ngIf="issearch">
+    <table class = "table table-striped">
+      <thead>
+      <tr>
+        <th>Start</th>
+        <th>Destination</th>
+        <th>Data</th>
+        <th>Hour</th>
+        <th>Price</th>
+        <th>Seats</th>
+        <th>Company</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor = "let flight of flight1" >
+        <td> {{ flight.start }} </td>
+        <td> {{ flight.destination }} </td>
+        <td> {{ flight.data }} </td>
+        <td> {{ flight.hour }} </td>
+        <td> {{ flight.price }} </td>
+        <td> {{ flight.seats }} </td>
+        <td> {{ flight.company }} </td>
+        <td>
+          <button  class = "btn btn-info">Buy</button>
+          <button  class = "btn btn-info" style="margin-left: 10px"> Reviews</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
