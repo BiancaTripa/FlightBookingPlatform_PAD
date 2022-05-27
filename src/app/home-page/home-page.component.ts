@@ -3,6 +3,8 @@ import {User} from "../Model/User";
 import {ServiceService} from "../Service/service.service";
 import {FlightServiceService} from "../Service/flight-service.service";
 import {Flight} from "../Model/Flight";
+import {Review} from "../Model/Review";
+import {ReviewServiceService} from "../Service/review-service.service";
 
 
 @Component({
@@ -17,7 +19,8 @@ export class HomePageComponent implements OnInit {
   flight1:Flight[];
   issearch=false;
 
-  constructor(private service:ServiceService,private flightService:FlightServiceService) {
+  constructor(private service:ServiceService,private flightService:FlightServiceService,private reviewService:ReviewServiceService) {
+
 
   }
 
@@ -37,5 +40,8 @@ export class HomePageComponent implements OnInit {
     console.log(this.flight1);
     this.issearch=true;
   }
+  // public showReview(){
+  //   this.reviewService.companyName=this.
+  // }
 
 }
