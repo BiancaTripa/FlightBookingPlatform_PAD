@@ -1,13 +1,27 @@
-<!--<div class="container col-md-6">-->
-<!--  <h1 style="color: #ff0000;">Register User</h1>-->
-<!--  <form (ngSubmit)="onSignUp()">-->
 
-<!--    <div class="mb-3">-->
-<!--      <label for="lastname" class="form-label">Lastname</label>-->
-<!--      <input type="text" class="form-control" id="lastname" name="lastname" [(ngModel)]="user.lastname">-->
-<!--    </div>-->
+<table class = "table table-striped">
+  <thead>
+  <tr>
+    <th>Lastname</th>
+    <th>Firstname</th>
+    <th>Review</th>
+  </tr>
+  </thead>
+  <tbody *ngFor="let flight of reviews">
+  <tr>
+    <td> {{ flight.lastname }} </td>
+    <td> {{ flight.firstname }} </td>
+    <td> {{ flight.review }} </td>
 
-<!--    <button type="submit" class="btn btn-primary">Register</button>-->
+  </tr>
+  </tbody>
+</table>
+<div class="mb-3">
+  <label for="review" class="form-label">AddYourReview</label>
+  <input type="text" class="form-control" id="review" name="review" [(ngModel)]="review.review" >
+  <button type="submit" (click)="AddReview()" class="btn btn-primary">AddReview</button>
+</div>
+<div>
+  <button type="submit" (click)="goBack()" class="btn btn-primary">Back</button>
+</div>
 
-<!--  </form>-->
-<!--</div>-->

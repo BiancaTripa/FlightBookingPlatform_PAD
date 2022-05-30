@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {User} from "../Model/User";
 import {ServiceService} from "../Service/service.service";
 import {FlightServiceService} from "../Service/flight-service.service";
@@ -13,6 +13,7 @@ import {ReviewServiceService} from "../Service/review-service.service";
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
+
   userLogged:User;
   flights:Flight[];
   flight=new Flight();

@@ -19,34 +19,8 @@
 
   </form>
   <div *ngIf="issearch">
-    <table class = "table table-striped">
-      <thead>
-      <tr>
-        <th>Start</th>
-        <th>Destination</th>
-        <th>Data</th>
-        <th>Hour</th>
-        <th>Price</th>
-        <th>Seats</th>
-        <th>Company</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr *ngFor = "let flight of flight1" >
-        <td> {{ flight.start }} </td>
-        <td> {{ flight.destination }} </td>
-        <td> {{ flight.data }} </td>
-        <td> {{ flight.hour }} </td>
-        <td> {{ flight.price }} </td>
-        <td> {{ flight.seats }} </td>
-        <td> {{ flight.company }} </td>
-        <td>
-          <button  class = "btn btn-info">Buy</button>
-          <button  class = "btn btn-info" style="margin-left: 10px"> Reviews</button>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+    <app-flight-list>
 
+    </app-flight-list>
   </div>
 </div>

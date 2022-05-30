@@ -11,6 +11,8 @@ import { RegisterComponent } from './register/register.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HomePageComponent } from './home-page/home-page.component';
 import { ReviewComponent } from './review/review.component';
+import { FlightListComponent } from './home-page/flight-list/flight-list.component';
+import { FlightItemComponent } from './home-page/flightList/flight-item/flight-item.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ReviewComponent } from './review/review.component';
     LoginComponent,
     RegisterComponent,
     HomePageComponent,
-    ReviewComponent
+    ReviewComponent,
+    FlightListComponent,
+    FlightItemComponent
   ],
   imports: [
     BrowserModule,
