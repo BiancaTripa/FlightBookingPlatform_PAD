@@ -20,7 +20,7 @@ It will also handle all user management actions but will pass the responsibility
 
 3rd Server:
 Is a small microservice running node, listening to the kafka topic the gateway server pushes to. It will process the bookings, call external APIs and save it to in database.
-When booking a flight, the 2nd server will automatically redirect the user to an http page to complete the form needed to enter the desired country. This processing server will add all the completed documents in a database - mongodb.
+When booking a flight, the 2nd server will automatically redirect the user to an http page to complete the form needed to enter the desired country. This processing server will add all the completed documents in a database - MySQL.
 
 
 
